@@ -1,6 +1,8 @@
 import React from "react";
 import CartWidget from "./CartWidget";
 import Menu from "./Menu";
+import {Link} from 'react-router-dom'
+
 
 const NavBar = () => {
     
@@ -9,11 +11,10 @@ const NavBar = () => {
     <div className="navbar bg-base-100 bg-green-200">
         <div className="flex-1">
         <Menu/>
-            <a className="btn btn-ghost normal-case text-xl">
-                Mercado del Mate
-                <CartWidget/>
-                </a>
-                </div>
+            <Link to={'/'} className="btn btn-ghost normal-case text-xl">
+                Mercado del Mate <CartWidget/>
+            </Link>
+            </div>
                 <div className="flex-none">
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -35,27 +36,15 @@ const NavBar = () => {
                     </div>
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                
-                                </div>
-                                </label>
-                                <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                                    <li>
-                                        <a className="justify-between">
-                                            Perfil
-                                            <span className="badge">Nuevo!</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a>Opciones</a>
-                                    </li>
-                                    <li>
-                                        <a>Cerrar Sesión</a>
-                                    </li>
-                                </ul>
+                            <div className="w-10 rounded-full"></div>
+                            </label>
+                            <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                                <li><a className="justify-between">Perfil</a></li>
+                                <li><a>Opciones</a></li>
+                                <li><a>Cerrar Sesión</a></li>
+                            </ul>
                             </div>
                             </div>
-                            
                             </div> 
                             </>    
                             )

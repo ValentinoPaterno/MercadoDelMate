@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 function Menu() {
     return (
@@ -9,16 +11,13 @@ function Menu() {
         </label>
         <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-100">
             <li>
-                <a>Mates</a>
+                <Link to={`/catalogo`}>Catálogo</Link>
             </li>
             <li>
-                <a>Bombillas</a>
+                <Link to={`/contacto`}>Contacto</Link>
             </li>
             <li>
-                <a>Materas</a>
-            </li>
-            <li>
-                <a>Yerbas</a>
+                <Link to={`/nosotros`}>Nosotros</Link>
             </li>
         </ul>
     </div>
