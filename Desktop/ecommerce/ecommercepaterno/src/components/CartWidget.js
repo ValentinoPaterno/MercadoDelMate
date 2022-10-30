@@ -1,5 +1,4 @@
 import React from 'react'
-
 const CartWidget = () => {
     const iconSize = {
         height: "30px",

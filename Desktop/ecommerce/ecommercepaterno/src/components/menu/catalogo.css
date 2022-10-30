@@ -1,7 +1,81 @@
 .div-catalogo{
     width: 100%;
 }
+.wrapper-catalogo{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
+    grid-template-areas: 
+    "categories products products products products";
+}
+/* Productos */
+.productosText-container{
+    display: flex;
+    align-items: center;
+}
+.productos-text{
+    margin-right: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    grid-area: categories-text;
+}
+.productos-text:hover{
+    color: green;
+    transition: 1s all ease-in;
+}
 
+.categories-container{
+    padding: 0rem 0rem 2rem 2rem;
+    display: grid;
+    grid-template-rows: 0.28fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "categories-text"
+    "sub-categories"
+    "sub-categories"
+    "sub-categories"
+    "."
+    ;
+    flex-direction: column;
+    font-size: 1.5rem;
+    grid-area: categories;
+}
+.lists-container{
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    grid-area: sub-categories;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+.li-categorie{
+    margin-bottom: 1rem;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    width: 100%;
+    text-align: start;
+}
+.link-to:hover{
+    background-color: rgb(63, 153, 63);
+    padding: 0rem 3rem 0rem 3rem;
+    color: white;
+    transition: all 0.6s ease-in;
+}
+
+.productos-container{
+    background-image: url("https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/03/16155242/Yerba-Mate-1920.jpg");
+    background-attachment: fixed;
+    grid-area: products;
+}
+.items-container{
+    margin: 3%;
+}
+.product-img{
+    height: 10rem;
+}
+.product-price{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
 .subtitulos{
     background-color: aliceblue;
 }
