@@ -17,7 +17,7 @@ export const CartProvider = ({children}) => {
         console.log(cartItems);
     }, [cartItems]);
 
-    const addItemToCart = (product) => {
+    const addItemToCart = (product) => {Ñ
         const inCart = cartItems.find(
             (productInCart) => productInCart.id === product.id 
         );
